@@ -16,7 +16,7 @@ const SendNotification = () => {
         try {
             console.log("Sending notification with title:", title, "and body:", body);
 
-            const response = await fetch("https://mayo-backend.vercel.app/api/send-notification", {
+            const response = await fetch("http://localhost:5000/api/send-notification", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ title: title.trim(), body: body.trim() }),
